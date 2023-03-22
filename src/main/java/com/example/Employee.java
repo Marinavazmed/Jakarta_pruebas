@@ -1,8 +1,15 @@
 package com.example;
 
+import jakarta.persistence.*;
+
+//marca la entidad
+@Entity
+@Table(name="employees")
 public class Employee {
 
 		//Objeto employee para hacer pruebas
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long id;
 		private String name;
 		private String nif;
